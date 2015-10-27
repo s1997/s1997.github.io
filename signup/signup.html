@@ -1,0 +1,64 @@
+  <html> 
+   <head>
+        <include 'index.php'>
+        <include 'connection.php'>
+        <include 'code_exec.php'>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <link rel="stylesheet" href="signup.css">
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="signup.css">
+    </head>
+    <body>
+
+      <form action="signup.html" method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info**</legend>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name">
+          
+          <label for="mail">Email:</label>
+          <input type="email" id="mail" name="username">
+          
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password">
+          
+         
+        
+        <fieldset>
+          <legend><span class="number">2</span>Your profile</legend>
+          <label for="bio">Biography:</label>
+          <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+      </select>
+        
+          <label>Interests:</label>
+          <input type="checkbox" id="food" value="interest_food" name="user_interest"><label class="light" for="food">Food</label><br>
+            <input type="checkbox" id="tech" value="interest_tech" name="user_interest"><label class="light" for="tech">Technology</label><br>
+          <input type="checkbox" id="travel" value="interest_travel" name="user_interest"><label class="light" for="travel">Travel</label><br>
+          <input type="checkbox" id="sports" value="interest_sports" name="user_interest"><label class="light" for="sports">Sports</label><br>
+        
+        </fieldset>
+        <a href="../login/index.html"><button type="submit">Sign Up</button></a>
+      </form>
+
+  <?php
+
+  $sql = "\n"
+    . "\n"
+    . " CREATE TABLE IF NOT EXISTS `username` (\n"
+    . " \n"
+    . " `username` varchar(30) NOT NULL,\n"
+    . " `password` varchar(30) NOT NULL,\n"
+    . " `name` varchar(30) NOT NULL,\n"
+    . " \n"
+    . " PRIMARY KEY (`username`)\n"
+    . " ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ";
+  ?>
+      
+    </body>
+</html>
