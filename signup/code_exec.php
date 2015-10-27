@@ -4,8 +4,10 @@
     $name=$_POST['name'];
     $username=$_POST['username'];
     $password=$_POST['password'];
-    $
+
     mysql_query("INSERT INTO member(name, username, password)VALUES('$name', '$username', '$password')");
-    header("location: index.php?remarks=success");
+    ?>
+<meta http-equiv="refresh" content="0; url=../index.html?remark=success">
+    <?php
     mysql_close($con);
     ?>
